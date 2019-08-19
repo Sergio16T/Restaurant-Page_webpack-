@@ -1,4 +1,6 @@
-const renderMenu = function renderMenuPage() {
+const renderMenu = function renderMenuPage() { 
+    let menuExists = document.querySelector('.menu-Div'); 
+    if (document.body.contains(menuExists)) return; 
     let menuDiv = document.createElement('div'); 
     menuDiv.className ='menu-Div'; 
     let menuP1 = document.createElement('p'); 
@@ -35,7 +37,8 @@ const renderMenu = function renderMenuPage() {
     <strong> Dry Aged Ribeye,</strong> USDA Prime, cornbread & gouda fondue   48 <br> 
     <strong> 32 oz USDA Prime Porterhouse,</strong> smokey bleu cheese butter, caramelized onion jus    90 <br> 
     `
-    story.remove(); 
+    story.remove();
+    
 } 
 
 export default renderMenu

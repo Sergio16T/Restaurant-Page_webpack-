@@ -12,6 +12,8 @@ window.addEventListener('scroll', function(e) {
     }
 });
 function buildHomePage(){
+    let storyExists = document.querySelector('.story'); 
+    if (document.body.contains(storyExists)) return; 
     let menuDiv = document.querySelector('.menu-Div'); 
     let story = document.createElement('div');
     story.className ='story'; 
@@ -37,7 +39,9 @@ function buildHomePage(){
      restaurant of their own. The concept for what Fixe would be, began with Chef Robert writing down his favorite ingredients and that list became the foundation for everything we do. Our name is inspired by that feeling we aim to evoke in every part of the restaurant—you will crave the food and warm, welcoming experience so much that you have to go back to get your fixe (with the addition of an e for our Cajun roots, of course).
      The open kitchen will give diners a front row seat to all the action, as Chef Robert and his team create dishes you will never forget. Grab a barrel aged cocktail, have a seat in one of our intimate private dining rooms, or right at the chef’s table, and stay awhile. We can’t wait to have you!`; 
      para2.id ='story2';
-     menuDiv.remove(); 
+     menuDiv.remove();
+     
 }
 menuBar.addEventListener('click', renderMenu);
 fixeLogo.addEventListener('click', buildHomePage);  
+// need to figure out how to make it only build once! tried while loop.. 
