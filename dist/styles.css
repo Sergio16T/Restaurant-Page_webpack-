@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Slabo+27px&display=swap');
+
 *{
     font-family: 'Slabo 27px'; 
+    box-sizing: border-box; 
+}
+html {
+    height: 100%;
 }
 body {
     height: 100%;
@@ -39,13 +44,14 @@ p {
     margin-left: 5%; 
     margin-right: 5%; 
     display: flex; 
-    justify-content: space-between
+    justify-content: space-between;
 }
 .story > p {
     padding: 3%; 
 }
 .top-navigation-bar {
     width: 100%;
+    
      
 }
 ul {
@@ -64,27 +70,192 @@ li:hover {
     cursor: pointer; 
 }
 .hhflex-wrapper {
-     display: flex; 
-}
+    margin-top: 40px; 
+    margin-bottom: 40px; 
+    display: flex;
+    justify-content: space-around;
+    height: 400px;   
+} 
 .hh-column {
-    background-color: bisque;
+    
     display: flex;   
-    justify-content: space-around; 
+    justify-content: space-evenly;  
     flex-direction: column;
     align-items: center; 
 }
 #hh-title {
+    letter-spacing: .4em; 
     text-transform: uppercase;
     font-size: 25px; 
-    margin-bottom: 25px;  
+    margin-bottom: 50px;  
 }
 #join-us {
     text-align: center; 
     font-size: 20px; 
-    line-height: 2em; 
+    line-height: 3em; 
 }
 #hh-image {
-    background-image: url();
-    height: 100px; 
-    width: 100px; 
+    align-self: center;  
+    width: 50%; 
+    overflow: hidden;
 }
+/*img {
+    width: 100%;
+    height: auto; 
+    max-width: 100%;
+}*/
+img {
+    width: 100%;
+    height: 100%; 
+    object-fit: scale-down; 
+}
+/* look at specificity/ conflicts of img for background image being responsive*/
+.special-events-email { 
+    background-color: rgb(51, 50, 50); 
+    text-align: center; 
+    padding: 50px; 
+}
+/*form {
+    text-align: center; 
+}*/ 
+#email-input {
+    font-size: 20px; 
+    text-align: center; 
+    height: 50px; 
+    width: 50%; 
+    margin: 20px;
+    max-width: 500px; 
+}
+#events-header {
+    font-size: 25px; 
+    color:white; 
+    padding: 20px;
+    margin-top: 15px;
+    letter-spacing: .2em; 
+}
+.mobile-dd {
+    display: none; 
+    margin-top: 25px; 
+    float: right; 
+    font-size: 40px; 
+    color:white; 
+}
+.form-container {
+    margin-bottom: 50px; 
+    display:flex; 
+    justify-content: center; 
+}
+.form-wrapper {
+    border: 5px solid black; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-around; 
+    margin-top: 50px; 
+    width: 40%; 
+    padding: 30px; 
+}
+.form-wrapper > input, label {
+    width: auto; 
+    align-self: center; 
+    text-align: center; 
+}
+.form-wrapper >input {
+    padding: 5px; 
+    font-size: 1em; 
+    margin: 10px; 
+}
+.form-wrapper > label {
+    font-size: 20px; 
+}
+#city-name {
+    font-size: 30px; 
+}
+.reservations-div {
+    text-align: center; 
+}
+#select-party-size {
+    width: 30%; 
+    align-self: center; 
+ 
+
+}
+.submit-reservation-button {
+    width: auto; 
+    background-color: rgb(36, 76, 138); 
+    color:white; 
+    align-self: center; 
+    padding: 10px; 
+    font-size: .9em; 
+    margin: 20px; 
+
+}
+@media screen and (max-width: 720px) {
+
+.flex-container {
+    display: flex;
+    flex-flow: column; 
+    color: white; 
+    
+}
+.hhflex-wrapper {
+    display: flex;
+    flex-direction: column; 
+    height: 100%;
+    margin-bottom: 0; 
+}
+#hh-image {
+    align-self: center;
+    width: auto;
+  
+}
+.hh-column {
+    margin-bottom: 50px; 
+}
+.mobile-dd { 
+    display: block;
+    font-size: 40px; 
+    color: white;
+    
+}
+#hamburger {
+    float: right; 
+    margin-right: 15px; 
+}
+#hamburger:hover {
+    cursor: pointer;
+}
+.navigation-links {
+    justify-content: end; 
+}
+ul {
+    float: none;
+    text-align: end;
+    margin-top: 40px; 
+}
+li {
+    display: none;  
+    text-decoration: underline; 
+    flex-flow: column; 
+    font-size: 30px; 
+    color: white;
+    margin: 5px 5px; 
+    padding: 10px; 
+    background-color: goldenrod;
+
+}
+.li-dropdown {
+   display: block;  
+}
+header {
+    max-height: 110px; 
+ }
+} 
+/* need to create a media query for screen size less 720px wide 
+and make navigation bar change to a dropdown list from a small square --- tab 
+also get rid of white
+make it responsive so happy hour image flips to column / to it's own block.. 
+that way it doesn't continue getting smaller as screen gets smaller
+
+also need to make story columns responsive. 
+*/ 
+

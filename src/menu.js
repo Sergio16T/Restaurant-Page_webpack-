@@ -6,7 +6,10 @@ const renderMenu = function renderMenuPage() {
     let menuP1 = document.createElement('p'); 
     let menuP2 = document.createElement('p'); 
     let story= document.querySelector('.story');
-    let parentDiv = document.querySelector('body'); 
+    let parentDiv = document.querySelector('body');
+    let happyHourDiv = document.querySelector('.hhflex-wrapper'); 
+    let specialEventsDiv = document.querySelector('.special-events-email'); 
+    let reservationsDiv = document.querySelector('.reservations-div'); 
     parentDiv.insertBefore(menuDiv, story); 
     menuDiv.appendChild(menuP1);
     menuDiv.appendChild(menuP2); 
@@ -37,8 +40,18 @@ const renderMenu = function renderMenuPage() {
     <strong> Dry Aged Ribeye,</strong> USDA Prime, cornbread & gouda fondue   48 <br> 
     <strong> 32 oz USDA Prime Porterhouse,</strong> smokey bleu cheese butter, caramelized onion jus    90 <br> 
     `
-    story.remove();
-    
-} 
+    if (document.body.contains(story)) {
+        story.remove(); 
+        /*happyHourDiv.remove();
+        specialEventsDiv.remove(); */ 
+    }
+    else if (document.body.contains(reservationsDiv)) {
+        reservationsDiv.remove(); 
+    } 
+
+  
+};
 
 export default renderMenu
+
+// potentially write a function that checks if reservations page div exists.. if so remove it else return 
