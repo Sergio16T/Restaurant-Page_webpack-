@@ -33,7 +33,7 @@ header {
     width: 100%; 
     object-fit: cover; 
     margin-top: 0;
-    transition: opacity .5s ease-in-out; 
+    /*transition: opacity .5s ease-in-out; */
     background-repeat: repeat-x; 
 }
 #slide-1{
@@ -44,7 +44,6 @@ header {
     background-image: url(images/fixeDining1.jpg);
     visibility: hidden; 
 }
-/* images not stacked overeachother absolute position covers navigation bar.. */
 #slide-3 {
     background-image:url(images/fixeDiningRoom4.jpg); 
     visibility: hidden; 
@@ -308,4 +307,5 @@ that way it doesn't continue getting smaller as screen gets smaller
 
 also need to make story columns responsive. 
 */ 
+/* slide-arrows on i-phone are in middle of screen as opposed to at left and right..*/
 
