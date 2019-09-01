@@ -68,11 +68,13 @@ function advanceSlide(){
         slideImages[i].style.opacity = "0"; 
     }
     slideImages[slideIndex-1].style.visibility ="visible"; 
-    slideImages[slideIndex-1].style.transition ="opacity .8s ease-in-out"; 
+    slideImages[slideIndex-1].style.transition ="opacity 1s ease-in-out"; 
     slideImages[slideIndex-1].style.opacity ="1"; 
 
 }
-/*window.setInterval(advanceSlide, 6000); 
+
+//window.setInterval(advanceSlide, 6000); 
+/*
  bug first slide doesn't have fade In transition.
 also timer doesn't reset when I click buttons so ends up being really poorly timed. 
 */ 
