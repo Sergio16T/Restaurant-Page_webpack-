@@ -182,7 +182,7 @@ li:hover {
     color:white; 
 }
 .form-container {
-    margin-bottom: 50px; 
+    margin-bottom: 150px; 
     display:flex; 
     justify-content: center; 
 }
@@ -299,13 +299,9 @@ header {
     max-height: 110px; 
  }
 } 
-/* need to create a media query for screen size less 720px wide 
-and make navigation bar change to a dropdown list from a small square --- tab 
-also get rid of white
-make it responsive so happy hour image flips to column / to it's own block.. 
-that way it doesn't continue getting smaller as screen gets smaller
+ 
 
-also need to make story columns responsive. 
-*/ 
-/* slide-arrows on i-phone are in middle of screen as opposed to at left and right..*/
+/* slide-arrows on i-phone are in middle of screen as opposed to at left and right..
+happy hour hamburger image- work on responsive design/ how it resizes
+*/
 
