@@ -7,17 +7,19 @@ const fixeLogo = document.getElementById('fixe-logo');
 const hamburger = document.getElementById('hamburger');
 const links = document.querySelectorAll('li');
 const reservationsBar = document.getElementById('reservations'); 
+const slideContainer = document.querySelector('.slide-container');
+const slideArrows = document.querySelectorAll('.slide-arrow');
+const arrowPrevious =document.getElementById('previous'); 
+const arrowNext = document.getElementById('next'); 
 
 const toggleLinkDropdown = () => {
     links.forEach(link => link.classList.toggle('li-dropdown')); 
 }; 
 
 hamburger.addEventListener('click', function(e) {
-    //links.forEach(link => link.classList.toggle('li-dropdown'));
     toggleLinkDropdown(); 
 });
 links.forEach(link => link.addEventListener('click', function(e){
-    //links.forEach(link => link.classList.toggle('li-dropdown'));
     toggleLinkDropdown(); 
 }));
 
@@ -29,6 +31,46 @@ window.addEventListener('scroll', function(e) {
         header.style.backgroundColor ='transparent'
     }
 });
+slideContainer.addEventListener('mouseover', function(){
+    slideArrows.forEach(arrow => arrow.style.display = "block");
+});
+slideContainer.addEventListener('mouseout', function() {
+    slideArrows.forEach(arrow => arrow.style.display ="none");
+}); 
+
+
+// below working on creating javascript for slider to move through images. 
+let slideIndex = 1;
+let slideImages = document.querySelectorAll('.slide-image'); // nodeList of images for slider 
+console.log(slideImages); 
+arrowNext.addEventListener('click', advanceSlide); 
+arrowPrevious.addEventListener('click', previousSlide); 
+
+function previousSlide() {
+    slideIndex -= 1; 
+    if (slideIndex < 1) {slideIndex = slideImages.length}; 
+    for (let i =0; i<slideImages.length; i++) {
+        slideImages[i].style.visibility ="hidden";
+        slideImages[i].style.opacity = ".75"; 
+    }
+    slideImages[slideIndex-1].style.visibility ="visible"; 
+    slideImages[slideIndex-1].style.opacity ="1"; 
+ 
+}
+
+function advanceSlide(){ 
+    slideIndex += 1; 
+    if (slideIndex > slideImages.length) {slideIndex = 1};
+    for (let i =0; i<slideImages.length; i++) {
+        slideImages[i].style.visibility ="hidden"; 
+        slideImages[i].style.opacity = ".75"; 
+    }
+    slideImages[slideIndex-1].style.visibility ="visible"; 
+    slideImages[slideIndex-1].style.opacity ="1"; 
+
+}
+// above add set timeout function that scrolls through all of them. Use advance slide as template for that settimeout
+
 function buildHomePage(){    
     let storyExists = document.querySelector('.story'); 
     if (document.body.contains(storyExists)) return; 
