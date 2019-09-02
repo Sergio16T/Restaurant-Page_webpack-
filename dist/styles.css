@@ -25,29 +25,31 @@ header {
     float: left; 
 }
 .slide-container {
-    height: 500px;
+    height: 70vh;
 }
 #background-image, .slide-image, .slide-image >img {
     position: absolute;
-    height: 500px; 
+    height: 70vh; 
     width: 100%; 
-    object-fit: cover; 
+    background-size: cover; 
+    background-position: 70% 70%; 
     margin-top: 0;
-    /*transition: opacity .5s ease-in-out; */
     background-repeat: repeat-x; 
 }
 #slide-1{
-    background-image: url(images/fixeDiningRoom2.jpg); 
+    background-image: url(images/fixeDining1.jpg); 
     
+
 }
 #slide-2 {
-    background-image: url(images/fixeDining1.jpg);
+    background-image: url(images/fixeDiningRoom2.jpg);
     visibility: hidden; 
 }
 #slide-3 {
-    background-image:url(images/fixeDiningRoom4.jpg); 
+    background-image:url(images/fixe-bar.jpg); 
     visibility: hidden; 
 }
+
 #previous {
     z-index: 1;
     left: 15px; 

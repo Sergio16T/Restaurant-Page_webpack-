@@ -24,7 +24,7 @@ links.forEach(link => link.addEventListener('click', function(e){
 }));
 
 window.addEventListener('scroll', function(e) {
-    if (window.scrollY >= 355) {
+    if (window.scrollY >= ((this.innerHeight * .7) -110)) {
         header.style.backgroundColor = 'black';
        
     } else {
@@ -42,42 +42,44 @@ slideContainer.addEventListener('mouseout', function() {
 // below working on creating javascript for slider to move through images. 
 let slideIndex = 1;
 let slideImages = document.querySelectorAll('.slide-image'); // nodeList of images for slider 
+let interval =  window.setInterval(advanceSlide, 7000);
+
+
 console.log(slideImages); 
 arrowNext.addEventListener('click', advanceSlide); 
-arrowPrevious.addEventListener('click', previousSlide); 
+arrowPrevious.addEventListener('click', previousSlide);
 
-function previousSlide() {
-    slideIndex -= 1; 
-    if (slideIndex < 1) {slideIndex = slideImages.length}; 
+setImage(); 
+
+
+function setImage() {
     for (let i =0; i<slideImages.length; i++) {
-        slideImages[i].style.opacity = "0"; 
-        //slideImages[i].style.visibility ="hidden";
-
-    } 
-    slideImages[slideIndex-1].style.opacity ="1"; 
-    slideImages[slideIndex-1].style.transition ="opacity .8s ease-in-out"; 
-    slideImages[slideIndex-1].style.visibility ="visible";
- 
-}
-
-function advanceSlide(){ 
-    slideIndex += 1; 
-    if (slideIndex > slideImages.length) {slideIndex = 1};
-    for (let i =0; i<slideImages.length; i++) {
-        //slideImages[i].style.visibility ="hidden"; 
-        slideImages[i].style.opacity = "0"; 
+        slideImages[i].style.opacity = "0";
     }
     slideImages[slideIndex-1].style.visibility ="visible"; 
     slideImages[slideIndex-1].style.transition ="opacity 1s ease-in-out"; 
     slideImages[slideIndex-1].style.opacity ="1"; 
-
 }
 
-//window.setInterval(advanceSlide, 6000); 
-/*
- bug first slide doesn't have fade In transition.
-also timer doesn't reset when I click buttons so ends up being really poorly timed. 
-*/ 
+function previousSlide() {
+    clearInterval(interval);
+    interval = window.setInterval(advanceSlide, 8000);
+    slideIndex -= 1; 
+    if (slideIndex < 1) {slideIndex = slideImages.length}; 
+    setImage(); 
+ 
+}
+
+function advanceSlide(){ 
+    clearInterval(interval);
+    interval = window.setInterval(advanceSlide, 8000);
+    slideIndex += 1; 
+    if (slideIndex > slideImages.length) {slideIndex = 1};
+    setImage(); 
+   
+}
+
+
 
 function buildHomePage(){    
     let storyExists = document.querySelector('.story'); 
@@ -125,7 +127,7 @@ reservationsBar.addEventListener('click', renderReservations);
 then we're going to put a special events div with form input for email 
 then my personal story intro with button to another page to read full story 
 
-- also add photo gallery that changes at set interval for background images at top
+
 -IMPORTANT make full index page to be replaced by menu on click. currently added happy
 hour and email submit in default html that needs to be rebuilt and included above on click. 
 */ 
