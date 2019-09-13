@@ -11,10 +11,14 @@ body {
     height: 100%;
     margin: 0; 
 }
-header { 
+header {
     position: fixed; 
     transition: 2s;
     margin-top: 0;
+    background-color: transparent; 
+}
+.backgroundChange {
+    background-color: black; 
 }
 #fixe-logo {
     cursor: pointer; 
@@ -97,7 +101,8 @@ p {
      
 }
 ul {
-    float: right; 
+    float: right;
+    padding: 0;  
 }
 li {
     font-size: 30px; 
@@ -217,6 +222,7 @@ li:hover {
     text-align: center; 
 }
 #select-party-size {
+    font-size: 1em; 
     width: 30%; 
     align-self: center; 
  
@@ -242,12 +248,7 @@ li:hover {
 .sectionTitle {
     margin-left: 40%; 
 }
-.flex-container {
-    display: flex;
-    flex-flow: column; 
-    color: white; 
-    
-}
+
 .hhflex-wrapper {
     display: flex;
     flex-direction: column; 
@@ -264,7 +265,7 @@ li:hover {
 }
 .mobile-dd { 
     display: block;
-    font-size: 40px; 
+    font-size: 45px; 
     color: white;
     
 }
@@ -275,31 +276,33 @@ li:hover {
 #hamburger:hover {
     cursor: pointer;
 }
-.navigation-links {
-    justify-content: end; 
-}
+
 ul {
     float: none;
     text-align: end;
-    margin-top: 40px; 
+    margin-top: 110px; 
 }
 li {
     display: none;  
-    text-decoration: underline; 
-    flex-flow: column; 
     font-size: 30px; 
-    color: white;
-    margin: 5px 5px; 
+    color: black;
+    margin: 0px 5px; 
     padding: 10px; 
-    background-color: goldenrod;
+    background-color: white;
 
 }
+li:hover {
+    background-color: black; 
+    color: white; 
+}
 .li-dropdown {
-   display: block;  
+   display: block; 
+   border-bottom: 1px solid #929292;
 }
 header {
     max-height: 110px; 
  }
+
 } 
  
 

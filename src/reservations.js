@@ -1,6 +1,10 @@
 const renderReservations = function renderReservationsPage() {
     let reservationDivExists = document.querySelector('.reservations-div'); 
     if (document.body.contains(reservationDivExists)) return; 
+    let links = document.querySelectorAll('.nav-li');
+    if(document.querySelector('.nav-li').classList.contains('li-dropdown')){
+        links.forEach(link => link.classList.remove('li-dropdown'));
+    }
     let reservationsDiv = document.createElement('div'); 
     reservationsDiv.className = 'reservations-div'; 
     let cityName = document.createElement('span'); 
@@ -27,22 +31,27 @@ const renderReservations = function renderReservationsPage() {
     selectPartySize.id = "select-party-size"; 
     let labelParty = document.createElement('label'); 
     labelParty.innerHTML = `<label for ="select-party-size"> Party Size </label>`; 
+    /*
     let option1 = document.createElement('option');
     option1.className = 'options'; 
     option1.innerHTML = `<option value ='1'>1 </option> `;
     let option2 = document.createElement('option'); 
     option2.className = 'options'; 
     option2.innerHTML = `<option value ='2'> 2 </option> `;
+    */ 
     let submitButton =document.createElement('button'); 
     submitButton.className= 'submit-reservation-button'; 
     submitButton.setAttribute("type","button"); 
-    submitButton.textContent = "Find A Table"; 
-    /*var options = {};  
+    submitButton.textContent = "Find A Table";
+     
+    var options = [];
     for (let i = 1; i <= 12; i++){
-        options[i] = i; 
-        return options;     
-    }*/ 
-    // above code doesn't do what I want.. just an idea. 
+        let opt = document.createElement('option'); 
+        opt.className = 'options'; 
+        opt.innerHTML = `<option value ='${i}'> ${i} </option> `;
+        options.push(opt);
+    }
+
     let body = document.querySelector('body'); 
     body.appendChild(reservationsDiv); 
     reservationsDiv.appendChild(cityName); 
@@ -54,8 +63,13 @@ const renderReservations = function renderReservationsPage() {
     reservationForm.appendChild(inputTime);
     reservationForm.appendChild(labelParty); 
     reservationForm.appendChild(selectPartySize);
-    selectPartySize.appendChild(option1); 
-    selectPartySize.appendChild(option2); 
+
+    for(let i =0; i< options.length; i++){
+        selectPartySize.appendChild(options[i]); 
+    }
+    // ^ 
+    //selectPartySize.appendChild(option1); 
+    //selectPartySize.appendChild(option2); 
     reservationForm.appendChild(submitButton); 
 
     let story= document.querySelector('.story');
