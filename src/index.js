@@ -7,6 +7,7 @@ const menuBar = document.getElementById('menu');
 const fixeLogo = document.getElementById('fixe-logo');
 const hamburger = document.getElementById('hamburger');
 const links = document.querySelectorAll('.nav-li');
+const mobileDD = document.querySelector('.mobile-dd'); 
 const reservationsBar = document.getElementById('reservations'); 
 const slideContainer = document.querySelector('.slide-container');
 const slideArrows = document.querySelectorAll('.slide-arrow');
@@ -19,24 +20,36 @@ const toggleLinkDropdown = () => {
 let slideIndex = 1;
 let slideImages = document.querySelectorAll('.slide-image'); // nodeList of images for slider 
 let interval =  window.setInterval(advanceSlide, 7000);
-
+let counter = 0; 
 buildHomePage(); 
-addHamburgerEvents(); 
-setImage(); 
+addHamburgerEvents();
+setImage();
+
+window.onresize = addHamburgerEvents; 
 
 
 function addHamburgerEvents() {
-    if (window.innerWidth > 720){
+    let width = window.innerWidth; 
+    if(width > 720) {
         return; 
     }
-    hamburger.addEventListener('click', function(e) { 
-        toggleLinkDropdown(); 
-    });
-    links.forEach(link => link.addEventListener('click', function(e){
-        toggleLinkDropdown();
+    if (width <= 720) {
+        counter +=1; 
+    } 
+    if(counter == 1) {
+        hamburger.addEventListener('click', function(e) { 
+            toggleLinkDropdown(); 
+        });
+        
+        links.forEach(link => link.addEventListener('click', function(e){
+            toggleLinkDropdown();
 
-    }));
+        }));  
+    }
+
 }
+
+
 
 window.addEventListener('scroll', function(e) {
     if (window.scrollY >= ((this.innerHeight * .7) -110)) {
