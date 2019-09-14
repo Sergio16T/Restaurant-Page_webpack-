@@ -1,10 +1,10 @@
 const renderReservations = function renderReservationsPage() {
-    let reservationDivExists = document.querySelector('.reservations-div'); 
-    if (document.body.contains(reservationDivExists)) return; 
     let links = document.querySelectorAll('.nav-li');
     if(document.querySelector('.nav-li').classList.contains('li-dropdown')){
         links.forEach(link => link.classList.remove('li-dropdown'));
     }
+    let reservationDivExists = document.querySelector('.reservations-div'); 
+    if (document.body.contains(reservationDivExists)) return; 
     let reservationsDiv = document.createElement('div'); 
     reservationsDiv.className = 'reservations-div'; 
     let cityName = document.createElement('span'); 

@@ -24,8 +24,7 @@ buildHomePage();
 addHamburgerEvents();
 setImage();
 
-window.onresize = addHamburgerEvents; 
-
+window.onresize = addHamburgerEvents;
 
 function addHamburgerEvents() {
     let width = window.innerWidth; 
@@ -35,20 +34,13 @@ function addHamburgerEvents() {
     if (width <= 720) {
         counter +=1; 
     } 
-    if(counter == 1) {
+    if(counter == 1) { 
         hamburger.addEventListener('click', function(e) { 
             toggleLinkDropdown(); 
         });
-        
-        links.forEach(link => link.addEventListener('click', function(e){
-            toggleLinkDropdown();
-
-        }));  
     }
 
 }
-
-
 
 window.addEventListener('scroll', function(e) {
     if (window.scrollY >= ((this.innerHeight * .7) -110)) {

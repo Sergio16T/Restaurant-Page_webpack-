@@ -1,10 +1,10 @@
 const renderMenu = function renderMenuPage() { 
-    let menuExists = document.querySelector('.menu-Div'); 
-    if (document.body.contains(menuExists)) return;
     let links = document.querySelectorAll('.nav-li');
     if(document.querySelector('.nav-li').classList.contains('li-dropdown')){
         links.forEach(link => link.classList.remove('li-dropdown'));
     }
+    let menuExists = document.querySelector('.menu-Div'); 
+    if (document.body.contains(menuExists)) return;
     let menuDiv = document.createElement('div'); 
     menuDiv.className ='menu-Div'; 
     let menuP1 = document.createElement('p'); 

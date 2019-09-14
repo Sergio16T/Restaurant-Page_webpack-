@@ -1,10 +1,10 @@
-function buildHomePage(){  
-    let storyExists = document.querySelector('.story'); 
-    if (document.body.contains(storyExists)) return;
+function buildHomePage(){
     let links = document.querySelectorAll('.nav-li');
     if(document.querySelector('.nav-li').classList.contains('li-dropdown')){
         links.forEach(link => link.classList.remove('li-dropdown'));
-    } 
+    }
+    let storyExists = document.querySelector('.story'); 
+    if (document.body.contains(storyExists)) return; 
     let menuDiv = document.querySelector('.menu-Div'); 
     let story = document.createElement('div');
     story.className ='story'; 
