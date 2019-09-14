@@ -7,7 +7,6 @@ const menuBar = document.getElementById('menu');
 const fixeLogo = document.getElementById('fixe-logo');
 const hamburger = document.getElementById('hamburger');
 const links = document.querySelectorAll('.nav-li');
-const mobileDD = document.querySelector('.mobile-dd'); 
 const reservationsBar = document.getElementById('reservations'); 
 const slideContainer = document.querySelector('.slide-container');
 const slideArrows = document.querySelectorAll('.slide-arrow');
