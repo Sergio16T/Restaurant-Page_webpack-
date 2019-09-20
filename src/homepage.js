@@ -12,7 +12,8 @@ function buildHomePage(){
     let para2 = document.createElement('p');
     let parentDiv = document.querySelector('body');
     let happyHour = document.querySelector('.happy-hour'); 
-    let reservationsDiv = document.querySelector('.reservations-div'); 
+    let reservationsDiv = document.querySelector('.reservations-div');
+    let privateDining = document.querySelector('.private-dining');
     //parentDiv.insertBefore(story, happyHour);
     parentDiv.appendChild(story); 
     story.appendChild(para1);
@@ -38,6 +39,9 @@ function buildHomePage(){
     else if (document.body.contains(menuDiv)) {
      menuDiv.remove();
     }
-     
+    else if(document.body.contains(privateDining)){
+        privateDining.remove(); 
+    }
+
 }
 export default buildHomePage

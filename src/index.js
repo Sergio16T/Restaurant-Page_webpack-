@@ -1,6 +1,7 @@
 import renderMenu from './menu'
 import renderReservations from './reservations'
 import buildHomePage from './homepage'
+import renderPrivateDining from './privateDining'
 
 var header = document.querySelector('header'); 
 const menuBar = document.getElementById('menu'); 
@@ -11,7 +12,8 @@ const reservationsBar = document.getElementById('reservations');
 const slideContainer = document.querySelector('.slide-container');
 const slideArrows = document.querySelectorAll('.slide-arrow');
 const arrowPrevious =document.getElementById('previous'); 
-const arrowNext = document.getElementById('next'); 
+const arrowNext = document.getElementById('next');
+const privateDiningBar = document.getElementById('private-dining'); 
 const toggleLinkDropdown = () => {
     links.forEach(link => link.classList.toggle('li-dropdown'));
     
@@ -56,7 +58,7 @@ slideContainer.addEventListener('mouseover', function(){
         return; 
     } 
     
-    if (window.innerWidth > 350) {
+    if (window.innerWidth > 550) {
     slideArrows.forEach(arrow => arrow.style.display = "block");
     }  
 
@@ -72,7 +74,9 @@ arrowNext.addEventListener('click', advanceSlide);
 arrowPrevious.addEventListener('click', previousSlide);
 menuBar.addEventListener('click', renderMenu);
 fixeLogo.addEventListener('click', buildHomePage);  
-reservationsBar.addEventListener('click', renderReservations); 
+reservationsBar.addEventListener('click', renderReservations);
+privateDiningBar.addEventListener('click', renderPrivateDining); 
+
 
 function setImage() {
     for (let i =0; i<slideImages.length; i++) {

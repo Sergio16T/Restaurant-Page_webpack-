@@ -13,7 +13,8 @@ const renderMenu = function renderMenuPage() {
     let parentDiv = document.querySelector('body');
     let happyHourDiv = document.querySelector('.hhflex-wrapper'); 
     let specialEventsDiv = document.querySelector('.special-events-email'); 
-    let reservationsDiv = document.querySelector('.reservations-div'); 
+    let reservationsDiv = document.querySelector('.reservations-div');
+    let privateDining = document.querySelector('.private-dining');
     parentDiv.insertBefore(menuDiv, story); 
     menuDiv.appendChild(menuP1);
     menuDiv.appendChild(menuP2); 
@@ -52,10 +53,12 @@ const renderMenu = function renderMenuPage() {
     else if (document.body.contains(reservationsDiv)) {
         reservationsDiv.remove(); 
     } 
+    else if(document.body.contains(privateDining)){
+        privateDining.remove(); 
+    }
 
   
 };
 
 export default renderMenu
 
-// potentially write a function that checks if reservations page div exists.. if so remove it else return 

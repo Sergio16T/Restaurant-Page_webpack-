@@ -74,6 +74,16 @@ header {
 .slide-arrow:hover {
     cursor: pointer;
 }
+/* might need class below*/ 
+.slide-arrow-block{
+    display: block;
+    position: absolute;
+    font-size: 7em;
+    top: 30%;
+    color: white;
+    background-color: transparent;
+    border: none;
+}
 
 p {
     text-align: center; 
@@ -238,6 +248,60 @@ li:hover {
     margin: 20px; 
 
 }
+.private-dining {
+    margin-top: 10vh; 
+    display:flex; 
+    flex-direction: column; 
+    align-items: center; 
+}
+.private-dining-header {
+    font-size: 20px; 
+    letter-spacing: .5em;
+
+
+}
+.private-dining-content { 
+    margin-top: 50px; 
+    margin-bottom: 50px; 
+}
+.tour-container {
+   height: 60vh;
+   width: 80vh; 
+   margin-bottom: 5%; 
+}
+#virtual-tour {
+   height: 100%; 
+   width: 100%; 
+   
+}
+.border-div {
+    border-top: 2px solid black; 
+    margin: 50px auto; 
+    width: 100px; 
+}
+@media screen and (max-width: 600px) {
+.tour-container {
+    width: 100%; 
+}
+}
+@media only screen 
+and (min-device-width: 375px) 
+and (max-device-width: 667px)
+and (-webkit-min-device-pixel-ratio: 2){
+.slide-arrow {
+    visibility: hidden; 
+}
+
+}
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+.slide-arrow {
+    visibility: hidden;
+}
+}
+/* need to create media queries for the private dining page */ 
 @media screen and (max-width: 720px) {
 .story {
     flex-direction: column; 
@@ -300,11 +364,12 @@ li:hover {
    border-bottom: 1px solid #929292;
 }
 header {
-    max-height: 110px; 
+    max-height: 110px;
+
  }
 
 } 
- 
+
 
 /* slide-arrows on i-phone are in middle of screen as opposed to at left and right..
 happy hour hamburger image- work on responsive design/ how it resizes

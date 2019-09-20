@@ -76,6 +76,7 @@ const renderReservations = function renderReservationsPage() {
     let happyHourDiv = document.querySelector('.hhflex-wrapper'); 
     let specialEventsDiv = document.querySelector('.special-events-email'); 
     let menuExists = document.querySelector('.menu-Div'); 
+    let privateDining = document.querySelector('.private-dining');
 
     if (document.body.contains(story)) {
         story.remove(); 
@@ -85,6 +86,9 @@ const renderReservations = function renderReservationsPage() {
     else if (document.body.contains(menuExists)) {
         menuExists.remove(); 
     } 
+    else if(document.body.contains(privateDining)){
+        privateDining.remove(); 
+    }
 
 }; 
 export default renderReservations
