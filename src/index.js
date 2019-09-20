@@ -59,14 +59,14 @@ slideContainer.addEventListener('mouseover', function(){
     } 
     
     if (window.innerWidth > 550) {
-    slideArrows.forEach(arrow => arrow.style.display = "block");
+    slideArrows.forEach(arrow => arrow.classList.add('slide-arrow-block'));
     }  
 
 });
 
 slideContainer.addEventListener('mouseout', function() {
-    if (window.innerWidth >350) {
-    slideArrows.forEach(arrow => arrow.style.display ="none");
+    if (window.innerWidth >550) {
+    slideArrows.forEach(arrow => arrow.classList.remove('slide-arrow-block'));
     }
 });
  
