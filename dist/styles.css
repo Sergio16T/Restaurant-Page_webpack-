@@ -263,11 +263,12 @@ li:hover {
     margin-top: 50px; 
     margin-bottom: 50px; 
 }
+
 .tour-container {
    height: 60vh;
    width: 80vh; 
    margin-bottom: 5%; 
-}
+}  
 #virtual-tour {
    height: 100%; 
    width: 100%; 
@@ -277,6 +278,9 @@ li:hover {
     border-top: 2px solid black; 
     margin: 50px auto; 
     width: 100px; 
+}
+#small-boardroom {
+    width:100%; 
 }
 @media screen and (max-width: 600px) {
 .tour-container {
