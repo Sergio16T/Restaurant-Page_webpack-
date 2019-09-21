@@ -13,7 +13,7 @@ const renderPrivateDining = function renderPrivateDining() {
     virtualTourDiv.className ="tour-container"; 
     let virtualTourIframe = document.createElement('iframe');
     virtualTourIframe.id ="virtual-tour"; 
-    virtualTourIframe.src ='https://www.google.com/maps/embed?pb=!4v1568957492237!6m8!1m7!1sCAoSLEFGMVFpcFBZMmV2QjYzOC1NNmtVWGNoYTA4OEwxY0wtMzZWN2pHNzgtV3ZP!2m2!1d30.26882804297229!2d-97.74838387582128!3f31.6!4f0.030000000000001137!5f0.5109000828902961" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""';
+    virtualTourIframe.src ='https://www.google.com/maps/embed?pb=!4v1569030738684!6m8!1m7!1sCAoSLEFGMVFpcFBZMmV2QjYzOC1NNmtVWGNoYTA4OEwxY0wtMzZWN2pHNzgtV3ZP!2m2!1d30.26882804297229!2d-97.74838387582128!3f31.6!4f0.030000000000001137!5f0.5109000828902961" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""'; 
     let borderDiv = document.createElement('div');
     borderDiv.className = 'border-div';
     let diningp2 = document.createElement('p'); 
@@ -23,9 +23,9 @@ const renderPrivateDining = function renderPrivateDining() {
     let menuExists = document.querySelector('.menu-Div');
     parentDiv.appendChild(diningDiv); 
     diningDiv.appendChild(span);
-    diningDiv.appendChild(diningP1);
+    diningDiv.appendChild(diningP1); 
     diningDiv.appendChild(virtualTourDiv);
-    virtualTourDiv.appendChild(virtualTourIframe);
+    virtualTourDiv.appendChild(virtualTourIframe); 
     diningDiv.appendChild(borderDiv);
     diningDiv.appendChild(diningp2); 
     span.className ='private-dining-header'; 

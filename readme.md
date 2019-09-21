@@ -1,4 +1,4 @@
-![Restaurant Page Screen Shot](images/screenShot.png)
+![Restaurant Page Screen Shot](dist/images/screenShot.png)
 
 Built responsive single page application using Webpack to bundle the JS modules. 
 
