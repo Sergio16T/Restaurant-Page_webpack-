@@ -14,7 +14,7 @@ const renderPrivateDining = function renderPrivateDining() {
     virtualTourDiv.className ="tour-container"; 
     let virtualTourIframe = document.createElement('iframe');
     virtualTourIframe.id ="virtual-tour"; 
-    virtualTourIframe.src ='https://www.google.com/maps/embed?pb=!4v1569030738684!6m8!1m7!1sCAoSLEFGMVFpcFBZMmV2QjYzOC1NNmtVWGNoYTA4OEwxY0wtMzZWN2pHNzgtV3ZP!2m2!1d30.26882804297229!2d-97.74838387582128!3f31.6!4f0.030000000000001137!5f0.5109000828902961" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""'; 
+    virtualTourIframe.src ='https://www.google.com/maps/embed?pb=!4v1569030738684!6m8!1m7!1sCAoSLEFGMVFpcFBZMmV2QjYzOC1NNmtVWGNoYTA4OEwxY0wtMzZWN2pHNzgtV3ZP!2m2!1d30.26882804297229!2d-97.74838387582128!3f31.6!4f0.030000000000001137!5f0.5109000828902961" width="600" height="450" frameborder="0" style="border:0;"allowfullscreen=""'; 
    
     let imageDiv = document.createElement('div'); 
     imageDiv.className ='image-div'; 
@@ -37,7 +37,7 @@ const renderPrivateDining = function renderPrivateDining() {
      
     diningDiv.appendChild(borderDiv);
     diningDiv.appendChild(diningp2); 
-    parentDiv.appendChild(imageDiv);
+    diningDiv.appendChild(imageDiv);
     imageDiv.appendChild(photo);
     span.className ='private-dining-header'; 
     span.textContent = 'PRIVATE DINING'; 
