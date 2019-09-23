@@ -98,8 +98,8 @@ p {
     font-size: 20px; 
     line-height: 2.5em; 
     margin-left: 5%; 
-    margin-right: 5%; 
-    display: flex; 
+    margin-right: 5%;
+    display: flex;
     justify-content: space-between;
 }
 .story > p {
@@ -134,9 +134,8 @@ li:hover {
     height: 400px;   
 } 
 .hh-column {
-    
     display: flex;   
-    justify-content: space-evenly;  
+    justify-content: space-evenly;
     flex-direction: column;
     align-items: center; 
 }
@@ -199,20 +198,20 @@ li:hover {
     color:white; 
 }
 .form-container {
-    margin-bottom: 150px; 
+    margin-bottom: 150px;
     display:flex; 
     justify-content: center; 
 }
 .form-wrapper {
-    border: 5px solid black; 
-    display: flex; 
-    flex-direction: column; 
+    border: 5px solid black;  
+    display: flex;
+    flex-direction: column;
     justify-content: space-around; 
     margin-top: 50px; 
     padding: 30px; 
 }
 .form-wrapper > input, label {
-    width: auto; 
+    width: auto;
     align-self: center; 
     text-align: center; 
 }
@@ -233,7 +232,7 @@ li:hover {
 }
 #select-party-size {
     font-size: 1em; 
-    width: 30%; 
+    width: 30%;
     align-self: center; 
  
 
@@ -241,7 +240,7 @@ li:hover {
 .submit-reservation-button {
     width: auto; 
     background-color: rgb(36, 76, 138); 
-    color:white; 
+    color:white;
     align-self: center; 
     padding: 10px; 
     font-size: .9em; 
@@ -281,12 +280,12 @@ li:hover {
 }
 #small-boardroom {
     width:100%; 
-}
+} 
 @media screen and (max-width: 600px) {
 .tour-container {
     width: 100%; 
 }
-}
+} 
 /*
 @media only screen 
 and (min-device-width: 375px) 
@@ -305,7 +304,7 @@ and (-webkit-min-device-pixel-ratio: 2){
     visibility: hidden;
 }
 } */ 
-/* need to create media queries for the private dining page */ 
+
 @media screen and (max-width: 720px) {
 .story {
     flex-direction: column; 
