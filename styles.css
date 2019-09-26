@@ -252,7 +252,7 @@ li:hover {
     display:flex; 
     flex-direction: column; 
     align-items: center;
-    margin-bottom: 10vh; 
+    /*margin-bottom: 10vh; */
 }
 .private-dining-header {
     font-size: 20px; 
